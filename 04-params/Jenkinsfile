@@ -13,6 +13,37 @@ pipeline{
         stage('selcting with env'){
             steps{
                 echo "Deploying to ${params.ENV} env"
+
+            // adding logic
+            script{
+                switch(params.ENV) {
+                    case 'prod':
+                    echo "Running in prod"
+                    break
+
+                    case 'uat':
+                    echo "Running in uat"
+                    break
+
+                    case 'test':
+                    echo "Running in test"
+                    break
+
+                    case 'dev':
+                    echo "Running in dev"
+                    break
+
+                    default:
+                    echo "invalid env selected"
+                }
+
+            }
+
+
+
+
+
+
             }
         }
     }
