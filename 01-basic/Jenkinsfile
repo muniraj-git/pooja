@@ -1,10 +1,10 @@
-pipleline{
+pipeline{
     agent any
 
         stages{
             stage('basic-file'){
                 steps{
-                    sh'''
+                    sh '''
                       echo "This is my file basic file"
                       '''
                 }
