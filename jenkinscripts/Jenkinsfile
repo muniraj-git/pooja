@@ -41,5 +41,14 @@ pipeline {
                 '''
             }
         }
+        stage('dev') {
+            steps {
+                sh '''
+                    uptime
+                    date
+                    echo "This is dev"
+                '''
+            }
+        }
     }
 }
