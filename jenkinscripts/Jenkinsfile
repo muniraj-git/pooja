@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                sh '''
+                    uptime
+                    date
+                    echo "This is my first project"
+                '''
+            }
+        }
+
+         stage('prod') {
+            steps {
+                sh '''
+                    uptime
+                    date
+                    echo "This is production"
+                '''
+            }
+        }
+
+        stage('uat') {
+            steps {
+                sh '''
+                    uptime
+                    date
+                    echo "This is uat"
+                '''
+            }
+        }
+
+        stage('test') {
+            steps {
+                sh '''
+                    uptime
+                    date
+                    echo "This is test"
+                '''
+            }
+        }
+    }
+}
