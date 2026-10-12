@@ -1,0 +1,13 @@
+pipleline{
+    agent any
+
+        stages{
+            stage('basic-file'){
+                steps{
+                    sh'''
+                      echo "This is my file basic file"
+                      '''
+                }
+            }
+        }
+}
