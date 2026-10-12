@@ -1,0 +1,19 @@
+pipeline{
+    agent any
+
+    parameters{
+        choice (
+            name: 'ENV',
+            choices: ['prod' ,'uat' , 'test', 'dev'],
+            description: 'select the deploying environment'
+        )
+    }
+
+    stages{
+        stage('selcting with env'){
+            steps{
+                echo "Deploying to ${params.ENV} env"
+            }
+        }
+    }
+}
