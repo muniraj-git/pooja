@@ -3,7 +3,6 @@ pipeline{
         label 'uat'
     }
     
-    
     stages{
         stage('git-checkout'){
             steps{
